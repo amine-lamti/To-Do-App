@@ -32,8 +32,14 @@ y.addEventListener('click', (e) => {
         di.remove()
     })
     btnComplete.addEventListener("click", function() {
-        btnComplete.innerHTML = "Undo"
-        di.style.textDecoration = "line-through"
+        if (btnComplete.innerHTML === "Complete") {
+            btnComplete.innerText = "Undo"
+            di.style.textDecoration = "line-through"
+        } else {
+            btnComplete.innerHTML = "Complete";
+            di.style.textDecoration = "none"
+        }
+
     })
 
 
